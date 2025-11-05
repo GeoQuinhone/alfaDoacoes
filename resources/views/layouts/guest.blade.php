@@ -15,14 +15,33 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
+        <!--
+          FUNDO:
+          Define o fundo como 'bg-gray-50' (cinza bem claro),
+          para imitar o fundo 'quase branco' da sua página principal.
+        -->
+        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-50">
+
+            <!-- Logo e Título -->
             <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <a href="/" class="flex justify-center">
+                    <!-- Certifique-se que o caminho da logo está correto -->
+                    <img src="{{ asset('images/LogoAlfaDoacoes.png') }}" alt="Logo Alfa Doações" class="w-20 h-auto">
                 </a>
+
+                <h2 class="mt-4 text-center text-2xl font-bold text-gray-900">
+                    Acesse o Sistema de Doações
+                </h2>
+                <p class="text-center text-gray-600 text-sm">
+                    Faça login para continuar
+                </p>
             </div>
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
+            <!--
+              CARD:
+              Este é o card branco que envolve o formulário ($slot).
+            -->
+            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
                 {{ $slot }}
             </div>
         </div>

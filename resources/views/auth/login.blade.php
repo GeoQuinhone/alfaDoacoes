@@ -5,16 +5,18 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
-        <!-- Email Address -->
+        <!-- Email -->
         <div>
-            <x-input-label for="email" :value="__('Email')" />
+            <!-- Traduzido -->
+            <x-input-label for="email" value="Email" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
-        <!-- Password -->
+        <!-- Senha -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Senha')" />
+            <!-- Traduzido -->
+            <x-input-label for="password" value="Senha" />
 
             <x-text-input id="password" class="block mt-1 w-full"
                             type="password"
@@ -24,23 +26,36 @@
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
-        <!-- Remember Me -->
+        <!-- Lembrar-me -->
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Lembrar Dispositivo!') }}</span>
+                <!--
+                  CORREÇÃO DE COR:
+                  Mudado de 'text-indigo-600' (roxo padrão do Breeze) para 'text-blue-600' (azul da sua marca).
+                -->
+                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-blue-600 shadow-sm focus:ring-blue-500" name="remember">
+                <!-- Traduzido -->
+                <span class="ms-2 text-sm text-gray-600">Lembrar-me</span>
             </label>
         </div>
 
         <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Esqueceu a senha?') }}
+                <!--
+                  CORREÇÃO DE COR E TEXTO:
+                  Link "Esqueceu a senha" estilizado com azul e traduzido.
+                -->
+                <a class="underline text-sm text-blue-600 hover:text-blue-800 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" href="{{ route('password.request') }}">
+                    Esqueceu sua senha?
                 </a>
             @endif
 
-            <x-primary-button class="ms-3">
-                {{ __('Entrar') }}
+            <!--
+              CORREÇÃO DE COR E TEXTO:
+              Botão de Login estilizado com azul (sobrescrevendo o padrão do x-primary-button).
+            -->
+            <x-primary-button class="ms-3 bg-blue-600 hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-800 focus:ring-blue-500">
+                Entrar
             </x-primary-button>
         </div>
     </form>

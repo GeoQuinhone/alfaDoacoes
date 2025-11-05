@@ -3,6 +3,12 @@ import forms from '@tailwindcss/forms';
 
 /** @type {import('tailwindcss').Config} */
 export default {
+
+    // ==========================================================
+    // ADICIONE ESTA LINHA PARA CORRIGIR OS INPUTS PRETOS
+    // ==========================================================
+    darkMode: 'selector',
+
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
