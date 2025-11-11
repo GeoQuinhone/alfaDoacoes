@@ -10,7 +10,6 @@
 </head>
 
 <body class="bg-gradient-to-br from-blue-50 to-purple-100 min-h-screen">
-    <!-- Header -->
     <header class="bg-white shadow-sm">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
@@ -33,10 +32,8 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <main class="container mx-auto px-6 py-12">
         <div class="text-center max-w-4xl mx-auto">
-            <!-- Ícone Principal -->
             <div class="mb-8">
                 <i class="fas fa-hand-holding-heart text-8xl text-blue-600 mb-6"></i>
             </div>
@@ -50,7 +47,6 @@
                 construir um mundo melhor para todos. Junte-se a nossa comunidade solidária.
             </p>
 
-            <!-- Cards de Benefícios -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
                     <i class="fas fa-heart text-4xl text-red-500 mb-4"></i>
@@ -69,7 +65,6 @@
                 </div>
             </div>
 
-            <!-- Call to Action -->
             <div class="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Pronto para Começar?</h2>
                 <p class="text-gray-600 mb-8">
@@ -101,7 +96,6 @@
         </div>
     </main>
 
-    <!-- Stats Section -->
     <section class="bg-blue-600 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -110,11 +104,11 @@
                     <div class="text-blue-200">Instituições</div>
                 </div>
                 <div>
-                    <div class="text-3xl font-bold mb-2">+1.000</div>
+                    <div class="text-3xl font-bold mb-2">+50</div>
                     <div class="text-blue-200">Doações Realizadas</div>
                 </div>
                 <div>
-                    <div class="text-3xl font-bold mb-2">+500</div>
+                    <div class="text-3xl font-bold mb-2">+80</div>
                     <div class="text-blue-200">Doadores Ativos</div>
                 </div>
                 <div>
@@ -125,7 +119,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center space-x-6 mb-4">
@@ -140,9 +133,7 @@
                 </a>
             </div>
             <p class="text-gray-400">
-                &copy; {{ date('Y') }} Sistema de Doações. Desenvolvido com
-                <i class="fas fa-heart text-red-500 mx-1"></i>
-                para ajudar quem precisa.
+                &copy; {{ date('Y') }} Sistema de Doações. Desenvolvido para ajudar quem precisa!!
             </p>
         </div>
     </footer>

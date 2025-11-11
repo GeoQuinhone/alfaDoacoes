@@ -18,7 +18,6 @@
                 @method('PUT')
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Nome -->
                     <div class="md:col-span-2">
                         <label for="nome" class="block text-sm font-medium text-gray-700">Nome do Item *</label>
                         <input type="text" name="nome" id="nome" value="{{ old('nome', $item->nome) }}"
@@ -29,7 +28,6 @@
                         @enderror
                     </div>
 
-                    <!-- Descrição -->
                     <div class="md:col-span-2">
                         <label for="descricao" class="block text-sm font-medium text-gray-700">Descrição</label>
                         <textarea name="descricao" id="descricao" rows="3"
@@ -39,7 +37,6 @@
                         @enderror
                     </div>
 
-                    <!-- Categoria -->
                     <div>
                         <label for="categoria" class="block text-sm font-medium text-gray-700">Categoria *</label>
                         <select name="categoria" id="categoria"
@@ -71,7 +68,6 @@
                         @enderror
                     </div>
 
-                    <!-- Instituição -->
                     <div>
                         <label for="instituicao_id" class="block text-sm font-medium text-gray-700">Instituição *</label>
                         <select name="instituicao_id" id="instituicao_id"
@@ -90,7 +86,6 @@
                         @enderror
                     </div>
 
-                    <!-- Quantidade Disponível -->
                     <div>
                         <label for="quantidade_disponivel" class="block text-sm font-medium text-gray-700">Quantidade
                             Disponível *</label>
@@ -103,7 +98,6 @@
                         @enderror
                     </div>
 
-                    <!-- Quantidade Necessária -->
                     <div>
                         <label for="quantidade_necessaria" class="block text-sm font-medium text-gray-700">Quantidade
                             Necessária *</label>
@@ -116,7 +110,6 @@
                         @enderror
                     </div>
 
-                    <!-- Urgente -->
                     <div class="md:col-span-2">
                         <div class="flex items-center">
                             <input type="checkbox" name="urgente" id="urgente" value="1"

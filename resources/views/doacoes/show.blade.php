@@ -89,37 +89,6 @@
                     @endif
                 </div>
             </div>
-
-            <!-- Impacto da Doação -->
-            <div class="border-t pt-6">
-                <h3 class="text-lg font-semibold text-gray-800 mb-4">Impacto da Doação</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="bg-green-50 p-4 rounded-lg text-center">
-                        <p class="text-2xl font-bold text-green-600">
-                            {{ $doacao->item->quantidade_disponivel }}/{{ $doacao->item->quantidade_necessaria }}
-                        </p>
-                        <p class="text-sm text-gray-600">Progresso do Item</p>
-                    </div>
-                    <div class="bg-blue-50 p-4 rounded-lg text-center">
-                        <p class="text-2xl font-bold text-blue-600">
-                            @php
-                                $percentual =
-                                    $doacao->item->quantidade_necessaria > 0
-                                        ? ($doacao->item->quantidade_disponivel /
-                                                $doacao->item->quantidade_necessaria) *
-                                            100
-                                        : 0;
-                            @endphp
-                            {{ number_format($percentual, 1) }}%
-                        </p>
-                        <p class="text-sm text-gray-600">Meta Atingida</p>
-                    </div>
-                    <div class="bg-purple-50 p-4 rounded-lg text-center">
-                        <p class="text-2xl font-bold text-purple-600">{{ $doacao->instituicao->doacoes->count() }}</p>
-                        <p class="text-sm text-gray-600">Total de Doações Recebidas</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 @endsection

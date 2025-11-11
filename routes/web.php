@@ -14,10 +14,12 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware(['auth'])->group(function () {
-    Route::resource('instituicoes', InstituicaoController::class);
+    Route::resource('instituicoes', InstituicaoController::class)->parameters([
+        'instituicoes' => 'instituicao',
+    ]);
     Route::resource('itens', ItemController::class);
     Route::resource('doacoes', DoacaoController::class)
-         ->parameters(['doacoes' => 'doacao']);
+        ->parameters(['doacoes' => 'doacao']);
     Route::get('/minhas-doacoes', [DoacaoController::class, 'minhasDoacoes'])->name('doacoes.minhas');
 });
 

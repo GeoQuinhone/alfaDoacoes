@@ -5,7 +5,6 @@
 @section('content')
     <div class="max-w-4xl mx-auto">
         <div class="bg-white rounded-lg shadow-md p-6">
-            <!-- Header -->
             <div class="flex justify-between items-start mb-6">
                 <div>
                     <h1 class="text-3xl font-bold text-gray-800">{{ $item->nome }}</h1>
@@ -32,7 +31,6 @@
                 </div>
             </div>
 
-            <!-- Informações -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div class="space-y-4">
                     <div>
@@ -50,7 +48,6 @@
                 </div>
 
                 <div class="space-y-4">
-                    <!-- Progresso -->
                     <div>
                         <h3 class="text-sm font-medium text-gray-500 mb-2">Progresso da Meta</h3>
                         @php
@@ -69,7 +66,6 @@
                         </div>
                     </div>
 
-                    <!-- Quantidades -->
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-green-50 p-4 rounded-lg text-center">
                             <p class="text-2xl font-bold text-green-600">{{ $item->quantidade_disponivel }}</p>
@@ -81,7 +77,6 @@
                         </div>
                     </div>
 
-                    <!-- Status -->
                     <div class="text-center">
                         @if ($item->quantidade_disponivel >= $item->quantidade_necessaria)
                             <span class="px-4 py-2 text-sm font-semibold rounded-full bg-green-100 text-green-800">
@@ -100,7 +95,6 @@
                 </div>
             </div>
 
-            <!-- Doações Relacionadas -->
             <div class="border-t pt-6">
                 <h3 class="text-lg font-semibold text-gray-800 mb-4">Doações Recebidas</h3>
                 @if ($item->doacoes->count() > 0)

@@ -17,7 +17,6 @@
                 @csrf
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Nome -->
                     <div class="md:col-span-2">
                         <label for="nome" class="block text-sm font-medium text-gray-700">Nome da Instituição *</label>
                         <input type="text" name="nome" id="nome" value="{{ old('nome') }}"
@@ -28,7 +27,6 @@
                         @enderror
                     </div>
 
-                    <!-- CNPJ -->
                     <div>
                         <label for="cnpj" class="block text-sm font-medium text-gray-700">CNPJ *</label>
                         <input type="text" name="cnpj" id="cnpj" value="{{ old('cnpj') }}"
@@ -39,7 +37,6 @@
                         @enderror
                     </div>
 
-                    <!-- Telefone -->
                     <div>
                         <label for="telefone" class="block text-sm font-medium text-gray-700">Telefone *</label>
                         <input type="text" name="telefone" id="telefone" value="{{ old('telefone') }}"
@@ -50,7 +47,6 @@
                         @enderror
                     </div>
 
-                    <!-- Email -->
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700">Email *</label>
                         <input type="email" name="email" id="email" value="{{ old('email') }}"
@@ -61,7 +57,6 @@
                         @enderror
                     </div>
 
-                    <!-- Categoria -->
                     <div>
                         <label for="categoria" class="block text-sm font-medium text-gray-700">Categoria *</label>
                         <select name="categoria" id="categoria"
@@ -85,7 +80,6 @@
                         @enderror
                     </div>
 
-                    <!-- Endereço -->
                     <div class="md:col-span-2">
                         <label for="endereco" class="block text-sm font-medium text-gray-700">Endereço</label>
                         <textarea name="endereco" id="endereco" rows="2"
@@ -95,7 +89,6 @@
                         @enderror
                     </div>
 
-                    <!-- Sobre -->
                     <div class="md:col-span-2">
                         <label for="sobre" class="block text-sm font-medium text-gray-700">Sobre a Instituição</label>
                         <textarea name="sobre" id="sobre" rows="4"
