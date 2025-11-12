@@ -139,7 +139,6 @@
         </div>
     </div>
 
-    {{-- Script para Modal de Confirmação de Exclusão (Substituindo alert()/confirm()) --}}
     <div id="delete-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center z-50">
         <div class="bg-white rounded-lg shadow-xl p-6 w-96">
             <h2 class="text-xl font-bold mb-4 text-red-600">Confirmação de Exclusão</h2>
